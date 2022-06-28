@@ -43,13 +43,13 @@ class Certificate:
         
         draw_(self.name, image_width, 525, 65)
         draw_(self.organization, image_width, 250, 85)
-        draw_(st("%d.%M.%Y", gt()), 1440, 1070, 30, status = False)
+        draw_(st("%d.%m.%Y", gt()), 1440, 1070, 30, status = False)
         draw_(f"{self.id}", 15, 1070, 30, status = False)
         draw_(f"{'Результат'}\n{self.result}%", 1440, 175, 30, status = False)
 
         
-        
-        img.save(f"certificates/{self.name}.jpg")
+        im_to_pdf = img.convert('RGB')
+        im_to_pdf.save(f"certificates/{self.name}.pdf")
             
     def setId(self, student_id):
         self.id = student_id

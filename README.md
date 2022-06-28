@@ -1,7 +1,7 @@
 # Certificate generator
 
 
-## setup tools and environment 
+## setup tools and environments 
 
 Create virtual environment:
 
